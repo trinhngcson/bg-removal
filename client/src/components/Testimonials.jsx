@@ -1,7 +1,6 @@
 import { testimonialsData } from "../assets/assets";
 
 const Testimonials = () => {
-  console.log(testimonialsData);
   return (
     <div className="m-4 lg:mx-60 py-20 xl:py-30">
       {/* Header */}
