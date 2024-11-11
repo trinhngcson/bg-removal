@@ -4,6 +4,7 @@ import cors from "cors";
 import connectDB from "./configs/mongodb.js";
 import userRouter from "./routes/userRoutes.js";
 import imageRouter from "./routes/imageRoutes.js";
+import bodyParser from "body-parser";
 
 //App config
 const PORT = process.env.PORT || 4000;
@@ -12,6 +13,8 @@ await connectDB();
 
 //Initialize Middlewares
 app.use(express.json());
+app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 //Api Rules
