@@ -115,7 +115,7 @@ const paymentZalopay = async (req, res) => {
     };
     const newTransaction = await transactionModel.create(transactionData);
     const embed_data = {
-      redirecturl: "http://localhost:5173/buy",
+      redirecturl: "https://bg-removal-fawn.vercel.app/buy",
     };
 
     const items = [{ [plan]: credits }];
